@@ -206,7 +206,7 @@ setup_dir(Key, Default) ->
     end.
 
 maybe_verify_directories() ->
-    case get_env(setup, verify_directories, true) of
+    case get_env(setup, verify_directories, false) of
         true ->
             verify_directories();
         false ->
